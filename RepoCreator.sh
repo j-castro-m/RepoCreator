@@ -1,5 +1,5 @@
 #!/bin/bash
-# Creator of Repos by vlad29
+# Creator of Repos
 #EG: INITIAL_ROOT=/home/username/repositories
 INITIAL_ROOT=
 #EG: REPOSERVER=serverpath.com
@@ -20,15 +20,18 @@ REPONAME="$REPONAME.git"
 cd $INITIAL_ROOT
 mkdir ./$REPONAME
 cd ./$REPONAME/
-git init --bare
+git init --bare > /dev/null
 
-if [[ "$1" = "-v" ]];
+
+
+
+if [[ "$1" != "--no-verbose" ]];
 then
 echo "__________________________________________________________"
 echo ""
 echo "                    $REPONAME                      "
 echo "__________________________________________________________"
-echo "________________NOT_EMPTY__PROJECT________________________"
+echo "__________________EMPTY__PROJECT__________________________"
 echo " cd my_project"
 echo " git init"
 echo " git add *"
