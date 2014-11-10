@@ -23,9 +23,7 @@ cd ./$REPONAME/
 git init --bare
 
 
-#echo '"git clone ssh://git@server/path/to/git-repo"
 
-#echo "git clone ssh://$REPOUSER@$REPOSERVER$INITIAL_ROOT/$REPONAME"
 echo "__________________________________________________________"
 echo ""
 echo "                    $REPONAME                      "
