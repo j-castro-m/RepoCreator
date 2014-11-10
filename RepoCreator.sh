@@ -22,8 +22,8 @@ mkdir ./$REPONAME
 cd ./$REPONAME/
 git init --bare
 
-
-
+if [[ "$1" = "-v" ]];
+then
 echo "__________________________________________________________"
 echo ""
 echo "                    $REPONAME                      "
@@ -38,5 +38,6 @@ echo " git push -u origin master"
 echo "__________________________________________________________"
 echo "________________CLONE__PROJECT____________________________"
 echo "git clone ssh://$REPOUSER@$REPOSERVER$INITIAL_ROOT/$REPONAME" 
+fi
 
 exit 0
